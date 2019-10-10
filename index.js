@@ -48,3 +48,14 @@ const tasksNumberPerCategory = {};
 tasksNumberPerCategory[PATTERN1] = tasksPattern1.length;
 tasksNumberPerCategory[PATTERN2] = tasksPattern2.length;
 console.log("Number of tasks per category:", tasksNumberPerCategory);
+
+const tasksLongerFourHours = tasks.filter(item => {
+    return item.timeSpent > 4;
+});
+let tasksLongerFourHoursBrief = tasksLongerFourHours.map(item => {
+    let newItem = {};
+    newItem.title = item.title;
+    newItem.category = item.category;
+    return newItem;
+});
+console.log("Tasks required more than 4 hours to complete:", tasksLongerFourHoursBrief);
