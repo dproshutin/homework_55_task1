@@ -29,3 +29,9 @@ timeSpentForBugs = timeSpentForBugs.reduce((acc, item) => {
     return acc + item;
 });
 console.log("Total time spent for fixing bugs:", timeSpentForBugs);
+
+const PATTERN = 'UI';
+let tasksByPattern = tasks.filter(item => {
+    return item.title.includes(PATTERN);
+});
+console.log("Number of tasks having 'UI' in their names:", tasksByPattern.length);
