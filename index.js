@@ -35,3 +35,16 @@ let tasksByPattern = tasks.filter(item => {
     return item.title.includes(PATTERN);
 });
 console.log("Number of tasks having 'UI' in their names:", tasksByPattern.length);
+
+const PATTERN1 = 'Frontend';
+const PATTERN2 = 'Backend';
+const tasksPattern1 = tasks.filter(item => {
+    return item.category === PATTERN1;
+});
+const tasksPattern2 = tasks.filter(item => {
+    return item.category === PATTERN2;
+});
+const tasksNumberPerCategory = {};
+tasksNumberPerCategory[PATTERN1] = tasksPattern1.length;
+tasksNumberPerCategory[PATTERN2] = tasksPattern2.length;
+console.log("Number of tasks per category:", tasksNumberPerCategory);
