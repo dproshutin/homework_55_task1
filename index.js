@@ -18,3 +18,14 @@ timeSpentForFrontend = timeSpentForFrontend.reduce((acc, item) => {
         return acc + item;
     });
 console.log("Total time spent for frontend tasks:", timeSpentForFrontend);
+
+const tasksBug = tasks.filter(item => {
+    return item.type === 'bug';
+});
+let timeSpentForBugs = tasksBug.map(item => {
+    return item.timeSpent;
+});
+timeSpentForBugs = timeSpentForBugs.reduce((acc, item) => {
+    return acc + item;
+});
+console.log("Total time spent for fixing bugs:", timeSpentForBugs);
